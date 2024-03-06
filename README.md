@@ -82,4 +82,4 @@ Weight       2
 
 Since variables ‘Age’, ‘CC’ and ‘Weight’ are quantitative and have skewed distributions, there were imputed by the median imputation. The categorical variable which is ‘FuelType’ was imputed by using the mode imputation. So after preprocessing the dataset there were 1435 observations and 10 attributes.
 
-![Picture1](https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/284f123b-3881-4f4b-bbae-d6e35b33bcac)
+
