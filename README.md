@@ -171,7 +171,7 @@ According to the model results (Table 5-4), Model has a high R square value (0.8
 
 pp plot Model 2
 
-<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/ef111dbc-ae5a-45b3-b4ad-a12b1e9a59b9" width="50%" height="50%">
+<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/ef111dbc-ae5a-45b3-b4ad-a12b1e9a59b9" width="40%" height="40%">
 
 <img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/6d31e17d-f704-45c1-a789-015b1c7f8c9b" width="40%" height="40%">
 
