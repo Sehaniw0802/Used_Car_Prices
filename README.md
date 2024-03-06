@@ -139,7 +139,7 @@ Model was fitted with a high R square value (0.879). Thus 87.9% of the variabili
 
 pp plot Model 1
 
-![PP Plot Model 1]<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/da1c7ad4-efd8-4705-bb23-31726aee341f" width="50%" height="50%">) ![Std residuals vs std fitted value Model1]<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/3c7e57c1-b413-4098-9baa-0bb0a65f2cc9" width="60%" height="60%">
+![PP Plot Model 1]<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/da1c7ad4-efd8-4705-bb23-31726aee341f" width="50%" height="50%">) ![Std residuals vs std fitted value Model1]<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/3c7e57c1-b413-4098-9baa-0bb0a65f2cc9" width="40%" height="40%">
 
 Standerdised residuals vs fitted value model 1
 
