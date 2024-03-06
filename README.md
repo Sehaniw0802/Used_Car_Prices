@@ -181,7 +181,7 @@ When considering the model assumptions, it can be seen that residuals are normal
 
      Table 5 5 VIF values of model 2
  
-<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/feb9f8df-7526-4ef3-b27d-f297e8fd48b7" width="40%" height="40%">
+<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/feb9f8df-7526-4ef3-b27d-f297e8fd48b7" width="30%" height="30%">
 
 When considering the VIF values, all the variables VIF values are less than 5 for all variables. Thus multicollinearity does not exist in the second model. Therefore when shifting from model 1 to model 2, problems that occurred due to multicollinearity have been removed.
 
