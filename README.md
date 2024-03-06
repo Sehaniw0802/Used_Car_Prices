@@ -91,7 +91,99 @@ The detailed Exploratory Data analysis of the study can be found on the folder '
 Figure 4 1 Boxplot of Price and summary statistics of price
  
 Figure 4 2 Histogram of price
-![Picture1](C:\Users\sehan\Used_Car_Prices\Images\Picture1.png)
 
 Price is the response variable of the study and it represents the car price of used cars. According to the histogram, it can be seen that price is unimodal positively skewed. Range of the car prices are spread between 4k and 32k and 9900 is the median value. According to the Boxplot it can be clearly seen that there are many outliers and among them 3 are highly deviated outliers. But there is not enough evidence to remove those outliers. And also it can be seen that 50% of the prices are between 8k and 12k.
+
+### 4.2 Correlation Matrix
+ 
+Figure 4 2 Correlation Matrix (Heat Map)
+
+By considering the correlation matrix, relationships among quantitative variables can be clearly seen. Pearson correlations among them have been calculated. According to this also it can be observed that variables Age has a strong relationship and KM and weight has moderately strong relationships with the Price. Doors and CC have weak positive relationships with Price and there is a moderately strong relationship between CC and Weight according to the correlation matrix. 
+Correlations between Price and categorical variables “Automatic” and “MetColor” were calculated by using the Point- biserial Correlation and there were respectively 0.0339 and 0.1076 correlations. Thus there are weak positive relationships between Price and the Automatic and, Price and the metColor. 
+
+## 5	Advanced Analysis
+
+To predict the Price of used cars Multiple Linear Regression Model is used. Variable “Price” is considered as the response variable and all the other variables are considered as independent variables. Among them “MetColor”, “Automatic” and “FuelType” were categorical variables and dummy variables were created for them. For the variable “FuelType” category “CNG” was considered as the base level and  for variables “Automatic” and “Metcolor”, categories “Not Automatic” and “Not Metallic Color” were used as base levels respectively. 
+
+An important part of predictive modelling is the careful partitioning of available data. When separating the data set into a training set and test set, 80% of the data used for training and 20% of the data is used for testing. 
+
+Table 5 1 Data Sets
+|Name of the dataset	|Number of Observations|
+|-----------------------|----------------------|
+|Train set	|1148|
+|Test set	|287|
+
+After the model has been processed by using the training set, the model is tested by making predictions against the test set. 
+
+### 5.1	Model 1 
+
+ fit the model for the train set, backward elimination was used as the feature selection method by considering the 0.05 as the significant level. Then following variables were obtained. 
+'Age', 'KM', 'HP', 'Auto_Automatic', 'CC', 'Weight', 'FT_CNG', 'FT_Diesel'
+
+Then the model was fitted using the above selected variables as independent variables and the variable “Price” as the dependent variable. 
+
+Table 5 2 Regression Results Model 1
+ 
+ 
+Model was fitted with a high R square value (0.879). Thus 87.9% of the variability of response variable is explained by the model. And the overall model also significant at 5% level with 0.00 F- statistic. When considering the significance of variables all the variables are significant at the 5% level as all the p values are less than 0.05. 
+
+
+When considering the model assumptions it can be seen that residuals are normally distributed (figure 5-1) according to the normal probability plot. But when considering the standardized residuals vs. fitted values (Figure 5-2), it can be seen that residuals are not randomly distributed and there is a curve shape. Thus the model is not adequate. And also there are few points which can be identified as outliers since they lie beyond the -2 and +2 levels. 
+					 
+
+When considering the VIF values. It can be seen that there are 3 variables called “HP”, “CC” and “FT_Diesel” which have VIF values greater than 5. Therefore it can be said that there is multicolinearity between the independent variables. 
+
+So because of the model assumption errors and the existence of the multicollinearity, to predict the used car prices in a more accurate way modifications for the obtained model is needed.
+
+### 5.2	Model 2
+
+Due to the skewness of the response variable and with need of model modifications, the response variable is transformed into log transformation and refits the model for the train set using backward elimination with 5% level of significance and by using log_price as the dependent variable and all the other variables as independent variables. Then the following variables were obtained as independent variables of the model.
+
+'Age', 'KM', 'HP', 'Auto_Automatic', 'Weight', 'FT_CNG'
+
+As the variable “FT_CNG” is a dummy variable, consider the dummy variable “FT_Diesel” also as an independent variable and refit the model by using all the above variables as independent variables and the variable “log_price” as the dependent variable.
+
+Table 5 4 Regression Results Model 2
+  
+ 
+
+According to the model results (Table 5-4), Model has a high R square value (0.857) Thus 85.7% of the variability is explained by the fitted model. And the overall model is significant at 5% level with 0.00 F-statistic value. Except for the dummy variable “FT_Diesel” all the other variables are significant at 5% level. 
+
+
+ 
+When considering the model assumptions, it can be seen that residuals are normally distributed according to the probability plot and it has a perfect normal distribution than the model 1 residuals. Plots of the standardized residuals vs. standardized predicted values graph are randomly scattered and the presented curve shape of the first model also has been removed. In both models outliers are present. Therefore, according to the results of residual analysis model 2 is better than model 1.
+
+     Table 5 5 VIF values of model 2
+ 
+
+When considering the VIF values, all the variables VIF values are less than 5 for all variables. Thus multicollinearity does not exist in the second model. Therefore when shifting from model 1 to model 2, problems that occurred due to multicollinearity have been removed.
+
+### 5.3	Comparison Between two models
+
+Table 5 6 Model summaries
+
+|Model	|Dependent Variable	|Adj. R Square value	|No. of variables	|Multicolinearity|
+|-------|-------------------|-----------------------|-------------------|----------------|
+|Model 1 	|Price	|0.879	|8	|Exist |
+|Model 2	|Log_price	|0.857	|7	|Doesn’t exist|
+
+When comparing the above 2 derived models, Model 1 has a higher adjusted R square value than the model 2. But both the adjusted R square values are high. When considering the no. of observations of two models, Model 1 has 7 variables and Model 2 has 8 variables. Thus model 2 is simpler than model 1. 
+Table 5 7 Correlation between Price and quantitative variables
+  
+When looking at the model variables Model 1 consists variable “CC” other than the model 2 variables. So investigation of the relationship between the variable “CC” and the dependent variable “Price” is important. The correlation between variable “Price” and the “CC” is 0.18125. So there is a weak positive relationship. Thus according to this data set, variable “CC” which is engine capacity does not make a huge impact on the car price. So not containing the variable “CC” by model 2 will not make a huge impact on the price of the cars. 
+
+When considering two models’ assumptions both models’ residuals are normally distributed. But model 2 residuals have a perfect normal distribution than model 1. As model 1 standardized residuals vs. standardized fitted value plot shows curve pattern model 1 is not adequate while model 2 plots are randomly scattered. Thus model assumptions are satisfied by model 2 rather than model 1.
+When considering the VIF values also, model 1 there exist multicollinearity and in model 2 multicollinearity does not exist as all VIF values are less than 5. 
+So by considering all these things model 2 can be considered as the best fitted model for the prediction of used car prices compared to model 1. 
+The calculated RMSE value by using the test set for the model 2 is 0.136. So as there is a very small RMSE value, it can be also said that model 2 is appropriate. 
+As in model 2 coefficient of variable “KM” is very small, divide the variable by 1000 and re-fit the model by using backward elimination. Then the same results were obtained as model 2. Same residuals plots and VIF values obtained. Only change was the variable “KM” coefficient multiplied by 1000. 
+So according to this dataset best fitted model to predict the used car price is,
+
+log(price) = 8.587 – 0.0105(Age) – 0.0017(KM) + 0.0025(HP) + 0.0393(Auto_Automatic) +                   0.0010(Weight) – 0.0741(FT_CNG) + 0.0120(FT_Diesel)
+
+Here values for variable “KM” should substitute as km per 1000 and, after computing the value for response variable “log_price” by substituting the values for independent variables, to get the used car price antilog of variable “log_price” must be calculated.        
+
+
+
+
 
