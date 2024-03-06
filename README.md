@@ -89,7 +89,7 @@ The detailed Exploratory Data analysis of the study can be found on the folder '
 ### 4.1	Price
   
 Figure 4 1 Boxplot of Price and summary statistics of price
- 
+https://github.com/Sehaniw0802/Used_Car_Prices/issues/1#issue-2171836522
 Figure 4 2 Histogram of price
 
 Price is the response variable of the study and it represents the car price of used cars. According to the histogram, it can be seen that price is unimodal positively skewed. Range of the car prices are spread between 4k and 32k and 9900 is the median value. According to the Boxplot it can be clearly seen that there are many outliers and among them 3 are highly deviated outliers. But there is not enough evidence to remove those outliers. And also it can be seen that 50% of the prices are between 8k and 12k.
