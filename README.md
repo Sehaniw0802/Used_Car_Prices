@@ -143,7 +143,7 @@ Model was fitted with a high R square value (0.879). Thus 87.9% of the variabili
 
 When considering the model assumptions it can be seen that residuals are normally distributed (figure 5-1) according to the normal probability plot. But when considering the standardized residuals vs. fitted values (Figure 5-2), it can be seen that residuals are not randomly distributed and there is a curve shape. Thus the model is not adequate. And also there are few points which can be identified as outliers since they lie beyond the -2 and +2 levels. 
 					 
-![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/VIF%20M1.png VIF value model 1)
+![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/VIF%20M1.png) VIF value model 1
 
 When considering the VIF values. It can be seen that there are 3 variables called “HP”, “CC” and “FT_Diesel” which have VIF values greater than 5. Therefore it can be said that there is multicolinearity between the independent variables. 
 
