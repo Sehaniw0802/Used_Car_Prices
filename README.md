@@ -94,11 +94,15 @@ Figure 4 1 Boxplot of Price and summary statistics of price
 
 Figure 4 2 Histogram of price
 
+![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/Picture1.png)
+
 Price is the response variable of the study and it represents the car price of used cars. According to the histogram, it can be seen that price is unimodal positively skewed. Range of the car prices are spread between 4k and 32k and 9900 is the median value. According to the Boxplot it can be clearly seen that there are many outliers and among them 3 are highly deviated outliers. But there is not enough evidence to remove those outliers. And also it can be seen that 50% of the prices are between 8k and 12k.
 
 ### 4.2 Correlation Matrix
  
 Figure 4 2 Correlation Matrix (Heat Map)
+
+![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/correlation%20matrix.png)
 
 By considering the correlation matrix, relationships among quantitative variables can be clearly seen. Pearson correlations among them have been calculated. According to this also it can be observed that variables Age has a strong relationship and KM and weight has moderately strong relationships with the Price. Doors and CC have weak positive relationships with Price and there is a moderately strong relationship between CC and Weight according to the correlation matrix. 
 Correlations between Price and categorical variables “Automatic” and “MetColor” were calculated by using the Point- biserial Correlation and there were respectively 0.0339 and 0.1076 correlations. Thus there are weak positive relationships between Price and the Automatic and, Price and the metColor. 
@@ -126,12 +130,20 @@ Then the model was fitted using the above selected variables as independent vari
 
 Table 5 2 Regression Results Model 1
  
- 
+![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/RegressionResultsModel1.png)
+
+![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/Regression%20Results%20Model1.1.png)
+
+
 Model was fitted with a high R square value (0.879). Thus 87.9% of the variability of response variable is explained by the model. And the overall model also significant at 5% level with 0.00 F- statistic. When considering the significance of variables all the variables are significant at the 5% level as all the p values are less than 0.05. 
 
+![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/PP%20Plot%20M1.png) PP plot of residuals model1
+
+![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/Std%20resuiduals%20vs%20fitted%20value%20M1.png) Standerdised residuals vs standerdised predicted value plot model2
 
 When considering the model assumptions it can be seen that residuals are normally distributed (figure 5-1) according to the normal probability plot. But when considering the standardized residuals vs. fitted values (Figure 5-2), it can be seen that residuals are not randomly distributed and there is a curve shape. Thus the model is not adequate. And also there are few points which can be identified as outliers since they lie beyond the -2 and +2 levels. 
 					 
+![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/VIF%20M1.png VIF value model 1)
 
 When considering the VIF values. It can be seen that there are 3 variables called “HP”, “CC” and “FT_Diesel” which have VIF values greater than 5. Therefore it can be said that there is multicolinearity between the independent variables. 
 
@@ -147,16 +159,21 @@ As the variable “FT_CNG” is a dummy variable, consider the dummy variable �
 
 Table 5 4 Regression Results Model 2
   
- 
+ ![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/Regression%20Results%20Model2.png)
+
+ ![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/Regression%20Results%20Model2.2.png)
 
 According to the model results (Table 5-4), Model has a high R square value (0.857) Thus 85.7% of the variability is explained by the fitted model. And the overall model is significant at 5% level with 0.00 F-statistic value. Except for the dummy variable “FT_Diesel” all the other variables are significant at 5% level. 
 
+![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/PP%20Plot%20M2.png)
 
+![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/Std%20resuiduals%20vs%20fitted%20value%20M2.png)
  
 When considering the model assumptions, it can be seen that residuals are normally distributed according to the probability plot and it has a perfect normal distribution than the model 1 residuals. Plots of the standardized residuals vs. standardized predicted values graph are randomly scattered and the presented curve shape of the first model also has been removed. In both models outliers are present. Therefore, according to the results of residual analysis model 2 is better than model 1.
 
      Table 5 5 VIF values of model 2
  
+![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/VIF%20M2.png)
 
 When considering the VIF values, all the variables VIF values are less than 5 for all variables. Thus multicollinearity does not exist in the second model. Therefore when shifting from model 1 to model 2, problems that occurred due to multicollinearity have been removed.
 
@@ -170,8 +187,11 @@ Table 5 6 Model summaries
 |Model 2	|Log_price	|0.857	|7	|Doesn’t exist|
 
 When comparing the above 2 derived models, Model 1 has a higher adjusted R square value than the model 2. But both the adjusted R square values are high. When considering the no. of observations of two models, Model 1 has 7 variables and Model 2 has 8 variables. Thus model 2 is simpler than model 1. 
+
 Table 5 7 Correlation between Price and quantitative variables
-  
+
+![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/Correlations%20comparison.png)
+
 When looking at the model variables Model 1 consists variable “CC” other than the model 2 variables. So investigation of the relationship between the variable “CC” and the dependent variable “Price” is important. The correlation between variable “Price” and the “CC” is 0.18125. So there is a weak positive relationship. Thus according to this data set, variable “CC” which is engine capacity does not make a huge impact on the car price. So not containing the variable “CC” by model 2 will not make a huge impact on the price of the cars. 
 
 When considering two models’ assumptions both models’ residuals are normally distributed. But model 2 residuals have a perfect normal distribution than model 1. As model 1 standardized residuals vs. standardized fitted value plot shows curve pattern model 1 is not adequate while model 2 plots are randomly scattered. Thus model assumptions are satisfied by model 2 rather than model 1.
