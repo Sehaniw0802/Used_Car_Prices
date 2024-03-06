@@ -145,7 +145,7 @@ Standerdised residuals vs fitted value model 1
 
 When considering the model assumptions it can be seen that residuals are normally distributed (figure 5-1) according to the normal probability plot. But when considering the standardized residuals vs. fitted values (Figure 5-2), it can be seen that residuals are not randomly distributed and there is a curve shape. Thus the model is not adequate. And also there are few points which can be identified as outliers since they lie beyond the -2 and +2 levels. 
 					 
-<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/d7235ef4-f253-4988-ba6c-3b1f65709f43" width="30%" height="30%"> 
+<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/d7235ef4-f253-4988-ba6c-3b1f65709f43" width="25%" height="25%"> 
 
 VIF value model 1
 
@@ -181,7 +181,7 @@ When considering the model assumptions, it can be seen that residuals are normal
 
      Table 5 5 VIF values of model 2
  
-<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/feb9f8df-7526-4ef3-b27d-f297e8fd48b7" width="30%" height="30%">
+<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/feb9f8df-7526-4ef3-b27d-f297e8fd48b7" width="25%" height="25%">
 
 When considering the VIF values, all the variables VIF values are less than 5 for all variables. Thus multicollinearity does not exist in the second model. Therefore when shifting from model 1 to model 2, problems that occurred due to multicollinearity have been removed.
 
