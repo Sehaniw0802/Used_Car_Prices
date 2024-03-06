@@ -1,7 +1,8 @@
 # Used_Car_Prices
 Regression Model to predict used car prices
 
-1.1 Background of the Study
+## Introduction
+### 1.1 Background of the Study
 
 The prices of new cars in the industry is fixed by the manufacturer with some additional 
 costs incurred by the government as taxes. So buying a new car can be considered as a money 
@@ -25,17 +26,17 @@ to sell their car or buy a used car. Therefore, because of the above discussed f
 for a used car price prediction system to effectively determine the worthiness of the car using a 
 variety of features
 
-1.2	Significance of the Study
+### 1.2	Significance of the Study
 
 As the used car market is globally increasing, it is important to have a proper way to predict the used car prices according to the features of the car for both buyers and sellers. Then they will be able to know the actual demand value of the cars and avoid the unnecessary money expenses. And also used car owners will be able to directly sell their cars to buyers without help from third party persons.
 
-2	Methodology
+## 2	Methodology
 
-2.1	Descriptive Analysis
+### 2.1	Exploratory Data Analysis
 
 Visually represent the information and data by using graphs. This is important because it allows trends and patterns to be more easily seen and make data easier for the human brain to understand. Data visualization provides a quick and effective way to communicate information in a universal manner with complicated and massive amounts of data. In this study there are both quantitative and categorical variables, and for the univariate analysis boxplots and histograms were used to represent quantitative data and pie charts were used to represent categorical data as the number of categories are small in every categorical variable. Under the bivariate analysis considered the relationships between dependent variable and independent variables and boxplots and scatterplots were used
 
-2.2	Advanced Analysis
+### 2.2	Advanced Analysis
 
 Multiple linear regression (MLR), known simply as multiple regression, is a statistical technique that uses several explanatory variables to predict the outcome of a response variable. The goal of multiple linear regression (MLR) is to model the linear relationship between the explanatory (independent) variables and response (dependent) variable.
 In essence, multiple regression is the extension of ordinary least-squares (OLS) regression because it involves more than one explanatory variable and the model is based on the following assumptions:
@@ -48,7 +49,7 @@ The equation for this model is as follows with p independent variables X1, X2, �
 Multiple linear regression model was used to fit the model for the dataset by considering used car price as the dependent variable and all the other variables as explanatory variables. Backward elimination was used as the feature selection. Residual analysis was done to check the assumptions of the model and VIF values used to check the multicolinearoty. R square and RMSE value used to check the accuracy of the model. 
 
 
-3	DATA
+## 3	DATA
 
 In this study collected dataset of used cars is being used and it contains 1436 cases of data and 10 variables. Variable description is as below and variable ‘Price’ is used as the response variable.
 3.1	Variable Description
@@ -66,7 +67,7 @@ Table 3 1 Variable Description
 |Doors	|The number of doors in the car	|quantitative variable|
 |Weight	|The weight of the car in kilograms	|quantitative variable|
 	
-3.2	Data Preparation
+### 3.2	Data Preparation
 
 Here in the dataset there were 1 duplicate observation. So it was removed from the dataset. And also there were 10 missing values as below. 
 Price        0
@@ -81,3 +82,16 @@ Doors        0
 Weight       2
 
 Since variables ‘Age’, ‘CC’ and ‘Weight’ are quantitative and have skewed distributions, there were imputed by the median imputation. The categorical variable which is ‘FuelType’ was imputed by using the mode imputation. So after preprocessing the dataset there were 1435 observations and 10 attributes.
+
+## 4 Exploratory Data Analysis
+The detailed Exploratory Data analysis of the study can be found on the folder 'EDA'.
+
+### 4.1	Price
+  
+Figure 4 1 Boxplot of Price and summary statistics of price
+ 
+Figure 4 2 Histogram of price
+![Picture1](C:\Users\sehan\Used_Car_Prices\Images\Picture1.png)
+
+Price is the response variable of the study and it represents the car price of used cars. According to the histogram, it can be seen that price is unimodal positively skewed. Range of the car prices are spread between 4k and 32k and 9900 is the median value. According to the Boxplot it can be clearly seen that there are many outliers and among them 3 are highly deviated outliers. But there is not enough evidence to remove those outliers. And also it can be seen that 50% of the prices are between 8k and 12k.
+
