@@ -102,7 +102,7 @@ Price is the response variable of the study and it represents the car price of u
  
 Figure 4 2 Correlation Matrix (Heat Map)
 
-![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/correlation%20matrix.png)
+<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/034c81a2-c6a5-4ef7-bd8d-0343ecd926de" width="40%" height="40%">
 
 By considering the correlation matrix, relationships among quantitative variables can be clearly seen. Pearson correlations among them have been calculated. According to this also it can be observed that variables Age has a strong relationship and KM and weight has moderately strong relationships with the Price. Doors and CC have weak positive relationships with Price and there is a moderately strong relationship between CC and Weight according to the correlation matrix. 
 Correlations between Price and categorical variables “Automatic” and “MetColor” were calculated by using the Point- biserial Correlation and there were respectively 0.0339 and 0.1076 correlations. Thus there are weak positive relationships between Price and the Automatic and, Price and the metColor. 
@@ -139,13 +139,14 @@ Model was fitted with a high R square value (0.879). Thus 87.9% of the variabili
 
 pp plot Model 1
 
-<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/da1c7ad4-efd8-4705-bb23-31726aee341f" width="40%" height="40%">) <img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/3c7e57c1-b413-4098-9baa-0bb0a65f2cc9" width="40%" height="40%">
+<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/da1c7ad4-efd8-4705-bb23-31726aee341f" width="40%" height="40%"> <img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/3c7e57c1-b413-4098-9baa-0bb0a65f2cc9" width="40%" height="40%">
 
 Standerdised residuals vs fitted value model 1
 
 When considering the model assumptions it can be seen that residuals are normally distributed (figure 5-1) according to the normal probability plot. But when considering the standardized residuals vs. fitted values (Figure 5-2), it can be seen that residuals are not randomly distributed and there is a curve shape. Thus the model is not adequate. And also there are few points which can be identified as outliers since they lie beyond the -2 and +2 levels. 
 					 
-![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/VIF%20M1.png) VIF value model 1
+<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/d7235ef4-f253-4988-ba6c-3b1f65709f43" width="40%" height="40%"> 
+VIF value model 1
 
 When considering the VIF values. It can be seen that there are 3 variables called “HP”, “CC” and “FT_Diesel” which have VIF values greater than 5. Therefore it can be said that there is multicolinearity between the independent variables. 
 
@@ -167,15 +168,19 @@ Table 5 4 Regression Results Model 2
 
 According to the model results (Table 5-4), Model has a high R square value (0.857) Thus 85.7% of the variability is explained by the fitted model. And the overall model is significant at 5% level with 0.00 F-statistic value. Except for the dummy variable “FT_Diesel” all the other variables are significant at 5% level. 
 
-![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/PP%20Plot%20M2.png)
+pp plot Model 2
 
-![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/Std%20resuiduals%20vs%20fitted%20value%20M2.png)
+<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/ef111dbc-ae5a-45b3-b4ad-a12b1e9a59b9" width="50%" height="50%">
+
+<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/6d31e17d-f704-45c1-a789-015b1c7f8c9b" width="40%" height="40%">
+
+Standerdised residuals vs fitted value model 2
  
 When considering the model assumptions, it can be seen that residuals are normally distributed according to the probability plot and it has a perfect normal distribution than the model 1 residuals. Plots of the standardized residuals vs. standardized predicted values graph are randomly scattered and the presented curve shape of the first model also has been removed. In both models outliers are present. Therefore, according to the results of residual analysis model 2 is better than model 1.
 
      Table 5 5 VIF values of model 2
  
-![Alt text](https://github.com/Sehaniw0802/Used_Car_Prices/blob/main/Images/VIF%20M2.png)
+<img src="https://github.com/Sehaniw0802/Used_Car_Prices/assets/66731646/feb9f8df-7526-4ef3-b27d-f297e8fd48b7" width="40%" height="40%">
 
 When considering the VIF values, all the variables VIF values are less than 5 for all variables. Thus multicollinearity does not exist in the second model. Therefore when shifting from model 1 to model 2, problems that occurred due to multicollinearity have been removed.
 
